@@ -1,25 +1,56 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
 import './App.css';
+import uniqid from "uniqid";
+import Form from "./Components/Form";
+// import Form from "./Components/Education";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import logo from './logo.svg';
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      general: {
+        name: '',
+        email: '',
+        phone: ''
+      },
+      education: {
+        id: uniqid(),
+        school: '',
+        major: '',
+        yearCompleted: ''
+      },
+      experience: {
+        id: uniqid(),
+        company: '',
+        position: '',
+        tasks: '',
+        yearStarted: '',
+        yearCompleted: '',
+      },
+      educationArray: [],
+      experienceArray: []
+    }
+  }
+
+  // onSubmit = (e) => {
+  //   e.preventDefault();
+  //   const value = e.target.value
+  //   this.setState({
+  //     ...this.state,
+  //     [e.target.name]: value
+  //   })
+  // }
+
+  render () {
+    return (
+      <div>
+        <Form />
+      </div>
+    );
+  }
 }
 
 export default App;

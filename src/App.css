@@ -1,15 +1,32 @@
 body {
   padding: 10px 20px 10px 20px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.form {
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.form, .display {
+  display: flex;
+  flex-direction: column;
   width: 50%;
 }
 
-.form, .general, .education, .experience {
+.general, .education, .experience {
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
+}
+
+.display {
+  display: flex;
 }
 
 .general, .education, .experience {
